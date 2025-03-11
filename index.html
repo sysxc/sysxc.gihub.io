@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社团主页</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- 引入Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-blue-500">雾痛研</a>
+                </div>
+                <div class="space-x-6">
+                    <a href="#" class="hover:text-blue-500">首页</a>
+                    <a href="#" class="hover:text-blue-500">活动</a>
+                    <a href="#" class="hover:text-blue-500">关于我们</a>
+                    <a href="#" class="hover:text-blue-500">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div class="max-w-6xl mx-auto px-4">
+        <div id="swiper-container" class="bg-gray-200 rounded-lg overflow-hidden mb-8">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/sysxc.gihub.io/hf.jpg" 
+                         alt="First Slide"
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/sysxc.gihub.io/kbn.jpg" 
+                         alt="Second Slide"
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/sysxc.gihub.io/ccz1.jpg" 
+                         alt="Third Slide"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- 社团简介 -->
+    <section class="max-w-6xl mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold text-center mb-6">社团简介</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg p-6 shadow-md">
+                <p>雾痛研，全名重庆痛车爱好者研习社，是由一群重庆本地对二次元充满热情的痛车爱好者于2024年底重新创立的。现已拥有包含四轮与二轮在内的总计超过40台的痛车。组织以痛车主为核心，汇聚了设计师、创作者、摄影师及其他对痛车文化有兴趣的爱好者。我们热忱欢迎所有对痛车文化感兴趣的朋友加入，共同推动重庆本地痛车文化的发展与创新。 </p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-md">
+                <img src="hdz.jpg" alt="社团活动照"
+                     class="w-full h-full object-cover rounded-lg mb-4">
+                <p>...</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-md">
+                <h3 class="text-xl font-bold mb-4">我们的价值</h3>
+                <ul>
+                    <li>• 痛车设计</li>
+                    <li>• 痛车拍摄</li>
+                    <li>• 活动交流</li>
+                    <li>• 商业合作</li>
+                    <li>• 同人探讨</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 联系信息 -->
+    <section class="max-w-4xl mx-auto px-4 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">我们的联系方式:</h3>
+                <p>QQ：906955141</p>
+                <p>邮箱：1468146508@QQ.com</p>
+            </div>
+        
+            <div>
+                <h3 class="text-xl font-bold mb-4">我们的地址:</h3>
+                <p>中国，重庆市</p>
+                <p>           </p>
+            </div>
+        </div>
+    </section>
+
+     <!-- 新增QR代码区域 -->
+     <div class="col-span-full md:col-span-auto lg:col-span-1">
+        <h3 class="text-xl font-bold mb-4">关注我们:</h3>
+        <div class="bg-white p-2 rounded shadow">
+            <img src="/sysxc.gihub.io/qrm.png" alt="QR Code" class="mx-auto h-auto w-full max-w-[150px]">
+        </div>
+    </div>
+</div>
+</section>
+
+    <!-- footer -->
+    <footer class="bg-gray-800 text-white min-h-[150px]">
+        <div class="max-w-6xl mx-auto px-4 py-8 flex justify-between items-center">
+            <p>© 2025 雾痛研. All rights reserved.</p>
+            <nav class="space-x-6">
+                <a href="#" class="hover:text-gray-300">首页</a>
+                <a href="#" class="hover:text-gray-300">活动</a>
+                <a href="#" class="hover:text-gray-300">关于我们</a>
+                <a href="#" class="hover:text-gray-300">联系我们</a>
+            </nav>
+        </div>
+    </footer>
+ 
+    
+    <!-- 初始化Swiper -->
+    <script>
+        var swiper = new Swiper("#swiper-container", {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            }
+        });
+    </script>
+
+</body>
+</html
+</think>
+
